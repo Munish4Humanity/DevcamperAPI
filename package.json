@@ -1,0 +1,12 @@
+{
+  "name": "devcamper_api",
+  "version": "1.0.0",
+  "description": "Dev Camper Backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "dev": "nodemon server"
+  },
+  "author": "Munish Sharma",
+  "license": "MIT"
+}
