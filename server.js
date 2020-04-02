@@ -4,7 +4,7 @@ const logger = require('./middleware/logger');
 const connectDB = require('./config/db');
 const colors = require('colors');
 const morgan = require('morgan');
-
+const errorHandler = require('./middleware/error');
 dotenv.config({ path: './config/config.env' });
 
 //Connect to database
@@ -28,6 +28,8 @@ if (process.env.NODE_ENV === 'development') {
 // app.use.logger;
 //Mount Routers
 app.use('/api/v1/bootcamps', bootcamps);
+
+app.use(errorHandler);
 
 app.get('/', (req, res) => {
   res.send('Hello from express');
